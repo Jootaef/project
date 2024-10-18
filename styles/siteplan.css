@@ -1,0 +1,115 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAE3E5; 
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #04080F; 
+    color: #A1C6EA; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.auto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #507DBC; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.auto img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #04080F; 
+    text-align: center;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #04080F; 
+    margin: 10px;
+}
+.header-description {
+    margin-top: 10px; 
+    font-size: 1rem;
+    color: #A1C6EA; 
+}
+
+
+button.more-info-btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #507DBC; /* Medium blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button.more-info-btn:hover {
+    background-color: #04080F; 
+}
+
+
+.extra-info {
+    display: none;
+    background-color: #BBD1EA; 
+    padding: 15px;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    transition: height 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auto {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
