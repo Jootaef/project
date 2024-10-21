@@ -1,115 +1,165 @@
-/* Estilos Generales */
+/* Paleta de colores adaptada */
+:root {
+    --main-bg-color: #1a1a1a; /* Fondo principal oscuro */
+    --secondary-bg-color: #2c2c2c; /* Fondo secundario más claro */
+    --highlight-color: #e60023; /* Rojo deportivo */
+    --text-color: #f0f0f0; /* Color del texto */
+    --hover-color: #ffa500; /* Naranja para el hover */
+}
+
+/* Estilo general */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Cambié a la fuente Roboto */
     margin: 0;
     padding: 0;
-    background-color: #DAE3E5; 
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
 
+/* Encabezado */
 header {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    padding: 1em 0;
     text-align: center;
-    padding: 20px;
-    background-color: #04080F; 
-    color: #A1C6EA; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5rem;
+/* Botón de menú hamburguesa */
+#hamburger {
+    display: none; /* Ocultar el menú hamburguesa por defecto */
+    cursor: pointer;
 }
 
+/* Barra de navegación */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+nav ul li a.active {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+/* Línea debajo de los enlaces */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: var(--highlight-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+nav ul li a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Contenido principal */
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 40px;
+}
+
+/* Tarjeta de auto */
+.car-card {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin: 15px;
     padding: 20px;
-}
-
-.auto {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.auto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.auto img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #507DBC; 
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-
-.auto img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.1);
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin: 10px;
-    color: #04080F; 
+    width: 300px; /* Ancho fijo para pantallas grandes */
     text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-p {
-    font-size: 0.9rem;
-    color: #04080F; 
-    margin: 10px;
-}
-.header-description {
-    margin-top: 10px; 
-    font-size: 1rem;
-    color: #A1C6EA; 
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-button.more-info-btn {
-    display: block;
-    width: calc(100% - 40px);
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #507DBC; /* Medium blue */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+.car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
-button.more-info-btn:hover {
-    background-color: #04080F; 
+/* Pie de página */
+footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 10px;
+    width: 100%;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-.extra-info {
-    display: none;
-    background-color: #BBD1EA; 
-    padding: 15px;
-    border-top: 1px solid #eee;
-    margin-top: 15px;
-    transition: height 0.3s ease;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Apilar enlaces de navegación verticalmente */
         align-items: center;
     }
 
-    .auto {
-        width: 100%;
-        margin: 20px 0;
+    #hamburger {
+        display: block; /* Mostrar el botón de menú hamburguesa en pantallas pequeñas */
     }
+
+    .car-card {
+        width: 90%; /* Ancho responsivo para pantallas pequeñas */
+    }
+
+    .cars-list {
+        grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
+        grid-auto-rows: minmax(200px, auto); /* Altura mínima para filas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .cars-list {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+}
+
+.cars-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas grandes */
+    gap: 20px; /* espacio entre columnas */
+    margin: 20px;
 }

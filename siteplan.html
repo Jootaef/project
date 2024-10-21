@@ -3,77 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Recommended Cars in Ecuador</title>
+    <meta name="description" content="Filtered Cars - Autos Page">
+    <meta name="author" content="Jaydan Valencia ">
+    <title>Filtered Cars - Autos</title>
     <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Recommended Cars in Ecuador</h1>
-        <p class="header-description">Discover the most popular and recommended cars in the Ecuadorian market.</p>
+        <h1>Los mejores 10 autos de Ecuador</h1>
+        <div id="hamburger">☰</div>
+        <nav id="nav">
+            <ul>
+                <li><a id="all" href="#">Todos</a></li>
+                <li><a id="old" href="#">Antiguos</a></li>
+                <li><a id="new" href="#">Nuevos</a></li>
+                <li><a id="expensive" href="#">Caros</a></li>
+                <li><a id="cheap" href="#">Baratos</a></li>
+                <li><a id="bestselling" href="#">Más Vendidos</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section>
-            <h2>Site Name</h2>
-            <p><strong>Recommended Cars in Ecuador</strong> was chosen to reflect the focus on the most used and recommended vehicles in the country, providing users with reliable information on purchasing options.</p>
-
-            <h2>Site Purpose</h2>
-            <p>The purpose of the site is to offer an informative platform for users who want to learn about the most recommended cars in Ecuador. Each vehicle has its own section with technical specifications and expert reviews, guiding buyers in making decisions.</p>
-        </section>
-
-        <section>
-            <h2>Scenarios</h2>
-            <ul>
-                <li>Which car is most suitable for traveling on Ecuador's mountainous roads?</li>
-                <li>What safety features are most important when choosing a car?</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Color Scheme</h2>
-            <p>The following colors were selected for the site:</p>
-            <ul>
-                <li><strong>#04080F - Very dark blue-black </strong> good for background or text contrast.</li>
-                <li><strong>#507DBC - Medium blue </strong> can be used for primary elements like buttons or links.</li>
-                <li><strong>#A1C6EA - Light blue </strong> ideal for accents or background highlights.</li>
-                <li><strong>#BBD1EA - Very light blue </strong>can be used for softer backgrounds or borders.</li>
-                <li><strong>#DAE3E5 - Light grayish blue </strong> perfect for a clean and neutral background.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Typography</h2>
-            <p>The selected font is <strong>Arial</strong>, used throughout the site to maintain readability and a modern appearance. It will be used for titles and body text.</p>
-        </section>
-
-        <section>
-            <h2>Wireframe</h2>
-            <p>Below is a sketch of what the homepage might look like on mobile and desktop devices:</p>
-            <img src="images/wireframe-mobil.PNG" alt="Wireframe mobile version">
-            <img src="images/wireframe-large.PNG" alt="Wireframe desktop version">
-        </section>
-
-        <section class="autos">
-            <div class="auto">
-                <img src="images/car-example.PNG" alt="Car 1">
-                <h2>Chevrolet DmaX</h2>
-                <p>Engine: <strong>4X4</strong></p>
-                <p>Fuel Consumption:<strong>Diesel</strong></p>
-                <p>Year: <strong>2021</strong></p>
-                <p>Safety: <strong>Airbags</strong></p>
-                <button class="more-info-btn">More Information</button>
-                <div class="extra-info">
-                    <p>Expert Review: <strong>Detailed car description...</strong></p>
-                    <p>Estimated Price: <strong>USD 15,000</strong></p>
-                    <p>Other relevant details...</p>
-                </div>
+        <section class="cars-list">
+            <div class="car-card">
+                <img src="images/car-dmax.PNG" alt="auto 1">
+                <h2>Chevrolet Dmax</h2>
+                <p><strong>Marca:</strong> Chevrolet</p>
+                <p><strong>Año:</strong> 2021</p>
+                <p><strong>Precio:</strong> $25,000</p>
+                <p><strong>Unidades Vendidas:</strong> 15,000</p>
             </div>
+
+            <div class="car-card">
+                <img src="images/car-aveo-active.PNG" alt="Auto 2">
+                <h2>Chevrolet Aveo Active</h2>
+                <p><strong>Marca:</strong> Chevrolet</p>
+                <p><strong>Año:</strong> 2010</p>
+                <p><strong>Precio:</strong> $6,000</p>
+                <p><strong>Unidades Vendidas:</strong> 50,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="images/car-suzuki.PNG" alt="Auto 3">
+                <h2>Suzuki Vitara Sz</h2>
+                <p><strong>Marca:</strong> Suzuki</p>
+                <p><strong>Año:</strong> 2014</p>
+                <p><strong>Precio:</strong> $9,000</p>
+                <p><strong>Unidades Vendidas:</strong> 70,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="images/car-hilux.PNG" alt="Auto 4">
+                <h2>Toyota Hilux 4x4</h2>
+                <p><strong>Marca:</strong> Toyota</p>
+                <p><strong>Año:</strong> 2022</p>
+                <p><strong>Precio:</strong> $30,000</p>
+                <p><strong>Unidades Vendidas:</strong> 60,000</p>
+            </div>
+            <div class="car-card">
+                <img src="images/car-ecosport.PNG" alt="Auto 5">
+                <h2>Ford EcoSport</h2>
+                <p><strong>Marca:</strong> Ford</p>
+                <p><strong>Año:</strong> 2014</p>
+                <p><strong>Precio:</strong> $11,000</p>
+                <p><strong>Unidades Vendidas:</strong> 40,000</p>
+            </div>
+            <div class="car-card">
+                <img src="images/car-rio.PNG" alt="Auto 6">
+                <h2>Kia Rio</h2>
+                <p><strong>Marca:</strong> Kia</p>
+                <p><strong>Año:</strong> 2017</p>
+                <p><strong>Precio:</strong> $9,000</p>
+                <p><strong>Unidades Vendidas:</strong> 45,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="images/car-sportage.PNG" alt="Auto 7">
+                <h2>Kia Sportage</h2>
+                <p><strong>Marca:</strong> Kia</p>
+                <p><strong>Año:</strong> 2016</p>
+                <p><strong>Precio:</strong> $20,000</p>
+                <p><strong>Unidades Vendidas:</strong> 55,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="images/car-sail.PNG" alt="Auto 8">
+                <h2>Chevrolet Sail</h2>
+                <p><strong>Marca:</strong> Chevrolet</p>
+                <p><strong>Año:</strong> 2013</p>
+                <p><strong>Precio:</strong> $7,000</p>
+                <p><strong>Unidades Vendidas:</strong> 80,000</p>
+            </div>
+            <div class="car-card">
+                <img src="images/car-T8.PNG" alt="Auto 9">
+                <h2>Jac T8 4x4</h2>
+                <p><strong>Marca:</strong> JAC</p>
+                <p><strong>Año:</strong> 2021</p>
+                <p><strong>Precio:</strong> $20,000</p>
+                <p><strong>Unidades Vendidas:</strong> 48,000</p>
+            </div>
+            <div class="car-card">
+                <img src="images/car-wingle7.PNG" alt="Auto 10">
+                <h2>Great Wall Wingle 7 4x4</h2>
+                <p><strong>Marca:</strong> Great Wall</p>
+                <p><strong>Año:</strong> 2021</p>
+                <p><strong>Precio:</strong> $20,000</p>
+                <p><strong>Unidades Vendidas:</strong> 56,000</p>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Recommended Cars in Ecuador. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> AutosPage, Ecuador. LastModified: <span id="lastModified"></span>.</p>
     </footer>
 </body>
 </html>
