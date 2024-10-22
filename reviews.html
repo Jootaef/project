@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Filtered Cars - Reviews">
+    <meta name="author" content="Jaydan Valencia">
+    <title>Filtered Cars - Reviews</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Top 10 Car Reviews in Ecuador</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="dealerships.html">Dealerships</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="references.html" class="active">references</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="reviews">
+            <h2>Customer Reviews for the Best 10 Cars in Ecuador</h2>
+            <div class="cars-list">
+                <div class="car-card">
+                    <h3>Chevrolet Dmax</h3>
+                    <p><strong>Rating:</strong> 4.5/5</p>
+                    <p>"The Dmax is a durable and reliable pickup truck. Perfect for rough terrains in Ecuador, and it's fuel-efficient too!"</p>
+                </div>
+                <div class="car-card">
+                    <h3>Chevrolet Aveo Active</h3>
+                    <p><strong>Rating:</strong> 4/5</p>
+                    <p>"Affordable and practical. It's a great choice for city driving, though it lacks the features of newer models."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Suzuki Vitara Sz</h3>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p>"This SUV is versatile and perfect for family trips. The fuel economy is excellent for long drives across the country."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Toyota Hilux 4x4</h3>
+                    <p><strong>Rating:</strong> 5/5</p>
+                    <p>"The Hilux is unbeatable. Its off-road performance is amazing, and it handles even the toughest roads with ease."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Ford EcoSport</h3>
+                    <p><strong>Rating:</strong> 4.3/5</p>
+                    <p>"Compact, yet spacious. It's great for city life, though the engine power could be stronger for highway driving."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Kia Rio</h3>
+                    <p><strong>Rating:</strong> 4.2/5</p>
+                    <p>"Stylish and comfortable. It’s affordable, though its performance drops slightly on steep hills."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Kia Sportage</h3>
+                    <p><strong>Rating:</strong> 4.6/5</p>
+                    <p>"A reliable SUV with a modern look. The Sportage combines comfort with excellent road handling."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Chevrolet Sail</h3>
+                    <p><strong>Rating:</strong> 4.1/5</p>
+                    <p>"It's a budget-friendly car that offers good value for money, though it feels a bit basic in terms of interior design."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Jac T8 4x4</h3>
+                    <p><strong>Rating:</strong> 4.4/5</p>
+                    <p>"The T8 is a tough and reliable pickup. It’s great for off-road adventures, but it lacks some modern tech features."</p>
+                </div>
+                <div class="car-card">
+                    <h3>Great Wall Wingle 7 4x4</h3>
+                    <p><strong>Rating:</strong> 4.5/5</p>
+                    <p>"Solid performance and a great value for money. The Wingle 7 offers a comfortable ride with a powerful engine."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> AutosPage, Ecuador.</p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

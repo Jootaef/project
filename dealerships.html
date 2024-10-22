@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Filtered Cars - Dealerships">
+    <meta name="author" content="Jaydan Valencia">
+    <title>Filtered Cars - Dealerships</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px; 
+            margin: 20px 0;
+        }
+        .dealerships {
+            list-style-type: none;
+            padding: 0;
+        }
+        .dealerships li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dealerships in Ecuador</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="dealerships.html" class="active">Dealerships</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="references.html" class="active">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Top Car Dealerships</h2>
+            <p>We have partnerships with the best car dealerships across Ecuador. Visit the nearest dealership to explore the cars you are interested in.</p>
+            <ul class="dealerships">
+                <li><strong>Chevrolet:</strong> <a href="https://www.chevrolet.com.ec/" target="_blank">Concesionario Chevrolet</a></li>
+                <li><strong>Ford:</strong> <a href="https://www.ford.com.ec/" target="_blank">Concesionario Ford</a></li>
+                <li><strong>Toyota:</strong> <a href="https://www.toyota.com.ec/" target="_blank">Concesionario Toyota</a></li>
+                <li><strong>Nissan:</strong> <a href="https://www.nissan.com.ec/" target="_blank">Concesionario Nissan</a></li>
+                <li><strong>Volkswagen:</strong> <a href="https://www.volkswagen.com.ec/" target="_blank">Concesionario Volkswagen</a></li>
+                <li><strong>Hyundai:</strong> <a href="https://www.hyundai.com.ec/" target="_blank">Concesionario Hyundai</a></li>
+                <li><strong>Kia:</strong> <a href="https://www.kia.com/ec/" target="_blank">Concesionario Kia</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Map</h2>
+            <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.489784497079!2d-79.92597968534343!3d-2.2073001474468384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd6cd0f23a1c83%3A0x75dfeaa49968dc1b!2sConcesionarios%20de%20autos%20en%20Ecuador!5e0!3m2!1ses!2sec!4v1697500000000!5m2!1ses!2sec"
+                allowfullscreen=""
+                loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> AutosPage, Ecuador.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

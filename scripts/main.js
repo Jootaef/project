@@ -95,25 +95,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     ];
 
-    // Render all cars initially
     renderCars(cars);
 
-    // Event listeners for navigation links
-    document.querySelectorAll('nav ul li a').forEach(link => {
+    document.querySelectorAll('nav#nav ul li a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const filter = e.target.id;
             filterCars(filter);
-            // Close the hamburger menu if it is active
-            if (nav.classList.contains('active')) {
-                toggleMenu();
-            }
+            toggleMenu();
         });
     });
 
     function renderCars(carsToRender) {
         const carsList = document.querySelector('.cars-list');
-        carsList.innerHTML = ''; // Clear existing cars
+        carsList.innerHTML = ''; // Clear previous cars
 
         carsToRender.forEach(car => {
             const carCard = document.createElement('div');
@@ -121,10 +116,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             carCard.innerHTML = `
                 <img src="${car.imageUrl}" alt="${car.carName}">
                 <h2>${car.carName}</h2>
-                <p><strong>Marca:</strong> ${car.brand}</p>
-                <p><strong>Año:</strong> ${car.year}</p>
-                <p><strong>Precio:</strong> $${car.price}</p>
-                <p><strong>Unidades Vendidas:</strong> ${car.unitsSold}</p>
+                <p><strong>Brand:</strong> ${car.brand}</p>
+                <p><strong>Year:</strong> ${car.year}</p>
+                <p><strong>Price:</strong> $${car.price}</p>
+                <p><strong>Units Sold:</strong> ${car.unitsSold}</p>
             `;
             carsList.appendChild(carCard);
         });
@@ -134,54 +129,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let filteredCars;
         switch (category) {
             case 'all':
-                filteredCars = cars; // Show all cars
+                filteredCars = cars; 
                 break;
             case 'old':
-                filteredCars = cars.filter(car => car.year < 2013); // Filter old cars
+                filteredCars = cars.filter(car => car.year < 2013); 
                 break;
             case 'new':
-                filteredCars = cars.filter(car => car.year >= 2018); // Filter new cars
+                filteredCars = cars.filter(car => car.year >= 2018); 
                 break;
             case 'expensive':
-                filteredCars = cars.filter(car => car.price > 15000); // Filter expensive cars
+                filteredCars = cars.filter(car => car.price > 15000); 
                 break;
             case 'cheap':
-                filteredCars = cars.filter(car => car.price <= 9000); // Filter cheap cars
+                filteredCars = cars.filter(car => car.price <= 9000); 
                 break;
             case 'bestselling':
-                filteredCars = cars.filter(car => car.unitsSold > 60000); // Filter bestselling cars
+                filteredCars = cars.filter(car => car.unitsSold > 60000); 
                 break;
             default:
-                filteredCars = cars; // Fallback to all cars
+                filteredCars = cars; 
                 break;
         }
         renderCars(filteredCars);
     }
-});
 
-// Select the hamburger icon and the navigation menu
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
 
-// Function to handle menu toggle
-function toggleMenu() {
-    nav.classList.toggle('active');
-}
-
-// Function to initialize event listeners based on screen width
-function initHamburgerMenu() {
-    if (window.innerWidth <= 600) { // Check if the viewport width is 600px or less
-        hamburger.style.display = 'block'; // Show the hamburger menu
-        hamburger.addEventListener('click', toggleMenu); // Add event listener for click
-    } else {
-        hamburger.style.display = 'none'; // Hide the hamburger menu
-        nav.classList.remove('active'); // Ensure nav is closed
-        hamburger.removeEventListener('click', toggleMenu); // Remove event listener for click
+    function toggleMenu() {
+        nav.classList.toggle('active');
     }
-}
 
-// Initial check on page load
-initHamburgerMenu();
+    function initHamburgerMenu() {
+        if (window.innerWidth <= 600) {
+            hamburger.style.display = 'block';
+            hamburger.addEventListener('click', toggleMenu);
+        } else {
+            hamburger.style.display = 'none';
+            nav.classList.remove('active');
+            hamburger.removeEventListener('click', toggleMenu);
+        }
+    }
 
-// Check on window resize
-window.addEventListener('resize', initHamburgerMenu);
+    initHamburgerMenu();
+
+    window.addEventListener('resize', initHamburgerMenu);
+});

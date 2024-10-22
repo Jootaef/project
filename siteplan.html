@@ -3,123 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Filtered Cars - Autos Page">
-    <meta name="author" content="Jaydan Valencia ">
-    <title>Filtered Cars - Autos</title>
-    <link rel="stylesheet" href="styles/siteplan.css">
-    <script src="scripts/siteplan.js" defer></script>
+    <meta name="description" content="Filtered Cars - Home">
+    <meta name="author" content="Jaydan Valencia">
+    <title>Filtered Cars - Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Los mejores 10 autos de Ecuador</h1>
+        <h1>The Top 10 Cars in Ecuador</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="dealerships.html">Dealerships</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
         <div id="hamburger">☰</div>
         <nav id="nav">
             <ul>
-                <li><a id="all" href="#">Todos</a></li>
-                <li><a id="old" href="#">Antiguos</a></li>
-                <li><a id="new" href="#">Nuevos</a></li>
-                <li><a id="expensive" href="#">Caros</a></li>
-                <li><a id="cheap" href="#">Baratos</a></li>
-                <li><a id="bestselling" href="#">Más Vendidos</a></li>
+                <li><a id="all" href="#">All</a></li>
+                <li><a id="old" href="#">Old</a></li>
+                <li><a id="new" href="#">New</a></li>
+                <li><a id="expensive" href="#">Expensive</a></li>
+                <li><a id="cheap" href="#">Cheap</a></li>
+                <li><a id="bestselling" href="#">Bestsellers</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="cars-list">
-            <div class="car-card">
-                <img src="images/car-dmax.PNG" alt="auto 1">
-                <h2>Chevrolet Dmax</h2>
-                <p><strong>Marca:</strong> Chevrolet</p>
-                <p><strong>Año:</strong> 2021</p>
-                <p><strong>Precio:</strong> $25,000</p>
-                <p><strong>Unidades Vendidas:</strong> 15,000</p>
-            </div>
-
-            <div class="car-card">
-                <img src="images/car-aveo-active.PNG" alt="Auto 2">
-                <h2>Chevrolet Aveo Active</h2>
-                <p><strong>Marca:</strong> Chevrolet</p>
-                <p><strong>Año:</strong> 2010</p>
-                <p><strong>Precio:</strong> $6,000</p>
-                <p><strong>Unidades Vendidas:</strong> 50,000</p>
-            </div>
-
-            <div class="car-card">
-                <img src="images/car-suzuki.PNG" alt="Auto 3">
-                <h2>Suzuki Vitara Sz</h2>
-                <p><strong>Marca:</strong> Suzuki</p>
-                <p><strong>Año:</strong> 2014</p>
-                <p><strong>Precio:</strong> $9,000</p>
-                <p><strong>Unidades Vendidas:</strong> 70,000</p>
-            </div>
-
-            <div class="car-card">
-                <img src="images/car-hilux.PNG" alt="Auto 4">
-                <h2>Toyota Hilux 4x4</h2>
-                <p><strong>Marca:</strong> Toyota</p>
-                <p><strong>Año:</strong> 2022</p>
-                <p><strong>Precio:</strong> $30,000</p>
-                <p><strong>Unidades Vendidas:</strong> 60,000</p>
-            </div>
-            <div class="car-card">
-                <img src="images/car-ecosport.PNG" alt="Auto 5">
-                <h2>Ford EcoSport</h2>
-                <p><strong>Marca:</strong> Ford</p>
-                <p><strong>Año:</strong> 2014</p>
-                <p><strong>Precio:</strong> $11,000</p>
-                <p><strong>Unidades Vendidas:</strong> 40,000</p>
-            </div>
-            <div class="car-card">
-                <img src="images/car-rio.PNG" alt="Auto 6">
-                <h2>Kia Rio</h2>
-                <p><strong>Marca:</strong> Kia</p>
-                <p><strong>Año:</strong> 2017</p>
-                <p><strong>Precio:</strong> $9,000</p>
-                <p><strong>Unidades Vendidas:</strong> 45,000</p>
-            </div>
-
-            <div class="car-card">
-                <img src="images/car-sportage.PNG" alt="Auto 7">
-                <h2>Kia Sportage</h2>
-                <p><strong>Marca:</strong> Kia</p>
-                <p><strong>Año:</strong> 2016</p>
-                <p><strong>Precio:</strong> $20,000</p>
-                <p><strong>Unidades Vendidas:</strong> 55,000</p>
-            </div>
-
-            <div class="car-card">
-                <img src="images/car-sail.PNG" alt="Auto 8">
-                <h2>Chevrolet Sail</h2>
-                <p><strong>Marca:</strong> Chevrolet</p>
-                <p><strong>Año:</strong> 2013</p>
-                <p><strong>Precio:</strong> $7,000</p>
-                <p><strong>Unidades Vendidas:</strong> 80,000</p>
-            </div>
-            <div class="car-card">
-                <img src="images/car-T8.PNG" alt="Auto 9">
-                <h2>Jac T8 4x4</h2>
-                <p><strong>Marca:</strong> JAC</p>
-                <p><strong>Año:</strong> 2021</p>
-                <p><strong>Precio:</strong> $20,000</p>
-                <p><strong>Unidades Vendidas:</strong> 48,000</p>
-            </div>
-            <div class="car-card">
-                <img src="images/car-wingle7.PNG" alt="Auto 10">
-                <h2>Great Wall Wingle 7 4x4</h2>
-                <p><strong>Marca:</strong> Great Wall</p>
-                <p><strong>Año:</strong> 2021</p>
-                <p><strong>Precio:</strong> $20,000</p>
-                <p><strong>Unidades Vendidas:</strong> 56,000</p>
-            </div>
-
+            <h2>List of cars</h2>
         </section>
     </main>
-
     <footer>
-        <p>&copy; <span id="currentYear"></span> AutosPage, Ecuador. LastModified: <span id="lastModified"></span>.</p>
+        <p>© <span id="currentYear"></span> Jaydan Valencia. Last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
