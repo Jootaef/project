@@ -140,7 +140,7 @@ footer {
     }
 
     #hamburger {
-        display: block; /
+        display: block; 
     }
 
     .car-card {
@@ -182,7 +182,7 @@ footer {
 }
 
 .dealerships li a {
-    color: var(#007bff); 
+    color: var(--link-color); 
 }
 
 .dealerships li a:hover {
